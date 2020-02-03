@@ -1,0 +1,27 @@
+<div class="allBurgers">
+    <div class="burgers">
+        {{#each burgers}}
+        {{#unless eaten}}
+        <div class="indBurger">
+            {{id}} - {{burger_name}}
+            <form class="eatenBurger" method="POST">
+                <button class="eatTheBurger">
+                    Eat this burger
+                </button>
+            </form>
+            {{/unless}}
+            {{/each}}
+        </div>
+    </div>
+    <div class = "eatenBurgers">
+        {{#each burgers}}
+        {{#if eaten}}
+        <div class="burger">{{id}} - {{burger_name}}</div>
+    </div>
+    <div class = "createBurger">
+        <form>
+            <input type="text" placeholder="Create a new burger">
+            <button type="submit"> Create your burger!</button>
+        </form>
+    </div>
+</div>
