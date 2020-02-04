@@ -47,16 +47,6 @@ var orm = {
             if(err) throw err;
             cb(result);
         });
-    },
-    delete: function(table, condition, cb) {
-        var queryParams= "DELETE FROM " + table;
-        queryParams+= " WHERE ";
-        queryParams+= condition;
-
-        connection.query(queryParams, function(err, result) {
-            if(err) throw err;
-            cb(result);
-        });
     }
 };
 
